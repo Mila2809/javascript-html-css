@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="name">Ticket Ciné</h1>
+
+<!-- DEBUT MENU BURGER -->
+
+        <div class="menu-container">
+            <!-- Icône du menu burger -->
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        
+            <!-- Liste des liens de navigation -->
+            <ul class="nav-menu">
+                <li><a href="carrousel.js">Carrousel</a></li>
+                <li><a href="formulaire.html">Formulaire</a></li>
+                <li><a href="#">
+                        <button>Mode Sombre</button>
+                </a></li>
+            </ul>
+        </div>
+
+<!-- FIN MENU BURGER -->
+
+    </nav>
+    <header></header>
+
+<!-- DEBUT FORMULAIRE -->
+
+    <nav>
+        <h2>Formulaire</h2>
+    </nav>
+    <main>
+        <form id="monFormulaire" action="" method="">
+            <fieldset class="lol"></fieldset>
+
+            <fieldset>
+                <legend> Informations personnelles * </legend>
+                <div>
+                    <label for="nom">Nom :</label><!-- Champ de texte simple -->
+                    <input type="text" id="nom" name="nom" required>
+                    <label for="email">E-mail :</label><!-- Champ de texte pour l'e-mail -->
+                    <input type="email" id="email" name="email" required>
+                    <label for="motDePasse">Mot de passe :</label><!-- Champ de texte pour le mot de passe -->
+                    <input type="password" id="motDePasse" name="motDePasse" required>
+<!-- Affiche un message d'erreur pour le mot de passe -->
+                    <p id="motDePasseError" class="error"></p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Genre * </legend>
+                <div>
+                    <input type="radio" id="homme" name="genre" value="homme"><!-- Boutons radio -->
+                    <label for="homme">Homme</label>
+                    <input type="radio" id="femme" name="genre" value="femme">
+                    <label for="femme">Femme</label>
+<!-- Affiche un message d'erreur pour le genre -->
+                    <p id="genreError" class="error"></p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Date de naissance </legend>
+                <div>
+                    <label for="Jour">Jour :</label>
+                    <input type="number" id="Jour" name="Jour" required>
+                    <label for="Mois">Mois :</label>
+                    <input type="number" id="Mois" name="Mois" required>
+                    <label for="Année">Année :</label>
+                    <input type="number" id="Année" name="Année" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Origine </legend>
+                <div>
+                    <label for="Continents">Continents :</label><!-- Menu déroulant (select) -->
+                    <select id="Continents" name="Continents">
+                        <option value="Europe">Europe</option>
+                        <option value="Asie">Asie</option>
+                        <option value="Amérique">Amérique</option>
+                        <option value="Afrique">Afrique</option>
+                        <option value="Océanie">Océanie</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Genres de Films préférer </legend>
+                <div>
+                    <input type="checkbox" id="action" name="action" value="action"><!-- Case à cocher -->
+                    <label for="action">Action</label>
+                    <input type="checkbox" id="cannibalisme" name="cannibalisme" value="cannibalisme">
+                    <label for="cannibalisme">Cannibalisme</label>
+                    <input type="checkbox" id="comedie" name="comedie" value="comedie">
+                    <label for="comedie">Comédie</label>
+                    <input type="checkbox" id="fantastique" name="fantastique" value="fantastique">
+                    <label for="fantastique">Fantastique</label>
+                    <input type="checkbox" id="guerre" name="guerre" value="guerre">
+                    <label for="guerre">Guerre</label>
+                    <input type="checkbox" id="horreur" name="horreur" value="horreur">
+                    <label for="horreur">Horreur</label>
+                    <input type="checkbox" id="policier" name="policier" value="policier">
+                    <label for="policier">Policier</label>
+                </div>
+                <div>
+                    <label for="Autre">Autre et pourquoi :</label><!-- Zone de texte -->
+                    <textarea id="Autre" name="Autre" rows="4" cols="40"></textarea>
+                </div>
+            </fieldset>
+
+            <div>
+                <p>Les cases avec des * doivent obligatoirement être remplie</p>
+            </div>
+            <div>
+                <input type="button" value="Envoyer" id="bt1"><!-- Input de type submit??? pour le bouton de soumission -->
+            </div>
+
+            <fieldset class="lol2"></fieldset>
+        </form>
+    </main>
+
+<!-- FIN FORMULAIRE -->
+
+    <footer>
+        <h3>Mentions légales</h3>
+    </footer>
+    <script src="formulaire.js"></script>
+</body>
+</html>
